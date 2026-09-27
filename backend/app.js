@@ -23,6 +23,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", auth);
 app.use("/api/properties", properties);
 app.use("/api/contact", contact);
+app.get('/health',(req,res)=> res.send("status : 200"));
 
 await connectDb();
 
