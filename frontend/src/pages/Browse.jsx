@@ -17,8 +17,9 @@ export default function Browse() {
     try {
       const { data } = await api.get('/properties', { params });
       setProperties(data);
-    } catch {
-      setProperties([]);
+    } catch(e) {
+      //setProperties([]);
+alert(JSON.stringify(e))
     } finally {
       setLoading(false);
     }
