@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://maison-gtgy.onrender.com',
+        target: 'https://maison-gtgy.onrender.com/api',
         changeOrigin: true,
       },
       '/uploads': {
