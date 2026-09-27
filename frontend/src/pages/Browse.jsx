@@ -18,8 +18,8 @@ export default function Browse() {
       const { data } = await api.get('/properties', { params });
       setProperties(data);
     } catch(e) {
-      //setProperties([]);
-alert(JSON.stringify(e))
+      setProperties([]);
+//alert(JSON.stringify(e))
     } finally {
       setLoading(false);
     }
